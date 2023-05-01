@@ -1,55 +1,55 @@
-body{
+body{ /*no margin and padding*/
    margin: 0;
    padding: 0;
    font-family: sans-serif;
-   background-color: #f5f5f5;
 }
 
-.header{
+/*Header*/
+.header{  /*header Flex*/
    display: flex;
    background-color: #222222;
    color: white; 
    justify-content: space-between; 
    padding-left: 17px; 
 }
-.header_left,.header_mid{
+.header_left,.header_mid{  /*header left and mid flex*/
    display: flex;
    justify-content: flex-start;
 }
-.header_right{
+.header_right{  /*header right flex*/
    display: flex;
    justify-content: flex-end;
 }
 
-.manga,.games{
+.manga,.games{    /*manga and games padding*/
    padding: 19px 17px 15px 17px;
 }
-.browse_button,.news_button{
+.browse_button,.news_button{  /*browse and news button padding*/
    padding: 19px 17px 15px 17px;
    display: flex;
 }
-.dropdown{
+.dropdown{  /*dropdown arrow on browse and news*/
    height: 10px;
    padding: 0px 5px 0px 10px;
 }
-.premium,.search,.watchlist,.account{
+.search,.watchlist,.account{  /*premium,search,watchlist,account padding*/
    padding: 20px 25px;
 }
-.pngs{
+.pngs{  /*.png sizing*/
    width: 17px;
    height: 17px;
    color: #5a5959;
 }
-.crunchyroll{
+.crunchyroll{   /*crunchyroll logo sizing*/
    height: 25px;
    width: 135px;
 }
 
-.logo{
+.logo{  /*logo positioning*/
    align-self: center;
    padding: 0px 12px 0px 10px;
 }
-.logo:hover{
+.logo:hover{  /*logo hover color change*/
    background-image: url(Images/kindpng_4935488.png);
    background-repeat: no-repeat;
    background-size: 85%;
@@ -57,17 +57,36 @@ body{
 
 }
 
-.manga:hover,.games:hover,.news_button:hover,.browse_button:hover{
+.manga:hover,.games:hover,.news_button:hover,.browse_button:hover{  /*hover effects*/
    background-color: rgb(131, 130, 130);
    cursor: pointer;
 }
-.permium:hover,.search:hover,.watchlist:hover,.account:hover{
-   background-color: rgb(172, 171, 171);
+.search:hover,.watchlist:hover,.account:hover{  /*hover effects*/
+   background-color: rgb(148, 142, 142);
    cursor: pointer;
-
 }
 
-.watch_now{
+.premium{
+   display: flex;
+   padding: 4px 25px;
+}
+.premium:hover{  /*hover effects*/
+   background-color: rgb(117, 112, 112);
+   cursor: pointer;
+}
+.premium_text{  /*specific text*/
+   font-size: 11px;
+   text-align: center;
+}
+.crown{  /*crown image*/
+   align-self: center;
+   width: 22px;
+   height: 15px;
+   padding: 0px 7px 0px 0px;
+}
+
+/*Slider below Header*/
+.watch_now{  /*continuously changing slider*/
    width: 100%;
    height: 400px;
    display: flex;
@@ -76,7 +95,7 @@ body{
    background: rgb(214,125,29);
    background: radial-gradient(circle, rgba(214,125,29,1) 35%, rgba(255,201,0,1) 100%); 
 }
-.left_arrow{
+.left_arrow{  /*left arrow design*/
    border: solid black;
    border-width: 0px 3px 3px 0px;
    padding: 5px;
@@ -84,7 +103,7 @@ body{
    transform: rotate(135deg);
    -webkit-transform: rotate(135deg);
 }
-.right_arrow{
+.right_arrow{  /*right arrow design*/
    border: solid black;
    border-width: 0px 3px 3px 0px;
    padding: 5px;
@@ -92,18 +111,18 @@ body{
    transform: rotate(-45deg);
    -webkit-transform: rotate(-45deg);
 }
-.poster_image{
+.poster_image{  /*centre poster image of trending anime*/
    height: 350px;
 }
-.right_arrow:hover,.left_arrow:hover{
-   border-color: white;
-}
-.arrow_r{
+/* .right_arrow:hover,.left_arrow:hover{  hover effects */
+   /* border-color: white; */
+/* } */
+.arrow_r{  /*arrow padding*/
    padding: 10px 15px 10px 10px;
 }
-.arrow_l{
+.arrow_l{  /*arrow padding*/
    padding: 10px 10px 10px 15px;
 }
-.arrow_l:hover,.arrow_r:hover{
+.arrow_l:hover,.arrow_r:hover{  /*hover effects*/
    background-color: #222222;
 }
