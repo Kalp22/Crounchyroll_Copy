@@ -2,13 +2,16 @@ body{ /*no margin and padding*/
    margin: 0;
    padding: 0;
    font-family: sans-serif;
+   background-color: black;
 }
 
 /*Header*/
 .header{  /*header Flex*/
+   position: fixed;
    display: flex;
    background-color: #222222;
    color: white; 
+   width: 100%;
    justify-content: space-between; 
    padding-left: 17px; 
 }
@@ -19,6 +22,7 @@ body{ /*no margin and padding*/
 .header_right{  /*header right flex*/
    display: flex;
    justify-content: flex-end;
+   padding-right: 15px;
 }
 
 .manga,.games{    /*manga and games padding*/
@@ -33,11 +37,11 @@ body{ /*no margin and padding*/
    padding: 0px 5px 0px 10px;
 }
 .search,.watchlist,.account{  /*premium,search,watchlist,account padding*/
-   padding: 20px 25px;
+   padding: 18px 20px;
 }
 .pngs{  /*.png sizing*/
-   width: 17px;
-   height: 17px;
+   width: 20px;
+   height: 20px;
    color: #5a5959;
 }
 .crunchyroll{   /*crunchyroll logo sizing*/
@@ -50,11 +54,9 @@ body{ /*no margin and padding*/
    padding: 0px 12px 0px 10px;
 }
 .logo:hover{  /*logo hover color change*/
-   background-image: url(Images/kindpng_4935488.png);
-   background-repeat: no-repeat;
-   background-size: 85%;
-   background-position-x: center;
-
+   content: url(Images/kindpng_4935488.png);
+   width: 135px;
+   height: 41%;
 }
 
 .manga:hover,.games:hover,.news_button:hover,.browse_button:hover{  /*hover effects*/
@@ -125,4 +127,23 @@ body{ /*no margin and padding*/
 }
 .arrow_l:hover,.arrow_r:hover{  /*hover effects*/
    background-color: #222222;
+}
+
+/*Slider info divs*/
+.pinfo_wrap{
+   display: flex;
+   padding: 20px 142px;
+   justify-content: space-between;
+}
+.posterinfo{
+   background-color: #3f3c3c;
+   width: 145px;
+   height: 40px;
+   padding: 5px 9px;
+   font-size: 10.9px;
+   color: white;
+}
+.posterinfo:hover{
+   background-color: #5c5c5c;
+   cursor: pointer;
 }
