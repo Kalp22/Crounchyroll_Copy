@@ -7,7 +7,7 @@ body{ /*no margin and padding*/
 
 /*Header*/
 .header{  /*header Flex*/
-   position: fixed;
+   position: fixed absolute;
    display: flex;
    background-color: #222222;
    color: white; 
