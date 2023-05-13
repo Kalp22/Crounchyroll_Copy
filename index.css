@@ -11,7 +11,7 @@ body{ /*no margin and padding*/
    display: flex;
    background-color: #222222;
    color: white; 
-   width: 100%;
+   width: auto;
    justify-content: space-between; 
    padding-left: 17px; 
 }
@@ -22,7 +22,6 @@ body{ /*no margin and padding*/
 .header_right{  /*header right flex*/
    display: flex;
    justify-content: flex-end;
-   padding-right: 15px;
 }
 
 .manga,.games{    /*manga and games padding*/
@@ -51,12 +50,13 @@ body{ /*no margin and padding*/
 
 .logo{  /*logo positioning*/
    align-self: center;
-   padding: 0px 12px 0px 10px;
+   padding: 17px 12px 17px 10px;
 }
 .logo:hover{  /*logo hover color change*/
    content: url(Images/kindpng_4935488.png);
+   padding: 17px 12px 19px 10px;
    width: 135px;
-   height: 41%;
+   cursor: pointer;
 }
 
 .manga:hover,.games:hover,.news_button:hover,.browse_button:hover{  /*hover effects*/
@@ -116,9 +116,9 @@ body{ /*no margin and padding*/
 .poster_image{  /*centre poster image of trending anime*/
    height: 350px;
 }
-/* .right_arrow:hover,.left_arrow:hover{  hover effects */
-   /* border-color: white; */
-/* } */
+.poster_image:hover{
+   cursor: pointer;
+}
 .arrow_r{  /*arrow padding*/
    padding: 10px 15px 10px 10px;
 }
@@ -127,6 +127,7 @@ body{ /*no margin and padding*/
 }
 .arrow_l:hover,.arrow_r:hover{  /*hover effects*/
    background-color: #222222;
+   cursor: pointer;
 }
 
 /*Slider info divs*/
@@ -137,8 +138,8 @@ body{ /*no margin and padding*/
 }
 .posterinfo{
    background-color: #3f3c3c;
-   width: 145px;
    height: 40px;
+   width: 145px;
    padding: 5px 9px;
    font-size: 10.9px;
    color: white;
@@ -146,4 +147,66 @@ body{ /*no margin and padding*/
 .posterinfo:hover{
    background-color: #5c5c5c;
    cursor: pointer;
+}
+
+/*Hindi Dubs Part*/
+.hindi_dub{
+   padding: 20px 142px;
+   color: white;
+}
+.hr_hindi{
+   height: 5px;
+   background: rgb(42,189,187);
+   background: linear-gradient(90deg, rgba(42,189,187,1) 35%, rgba(33,57,68,1) 100%); 
+}
+.shows_scroll{
+   display: flex;
+   align-items: center;
+   width: 100%;
+   justify-content: center;
+}
+.scrolling_shows{
+   display: flex;
+   align-items: start;
+   justify-content: space-between;
+   width: 79.2%;
+}
+.shows1{
+   width: 155px;
+   padding: 8px 5px 6px 5px;
+}
+.shows1:hover{
+   background-color: rgb(31, 31, 31);
+   cursor: pointer;
+}
+.card_img1{
+   width: 150px;
+}
+.card_name1{
+   color: white;
+}
+.left_arrow1{  /*left arrow design*/
+   border: solid white;
+   border-width: 0px 3px 3px 0px;
+   padding: 5px;
+   display: inline-block;
+   transform: rotate(135deg);
+   -webkit-transform: rotate(135deg);
+}
+.right_arrow1{  /*right arrow design*/
+   border: solid white;
+   border-width: 0px 3px 3px 0px;
+   padding: 5px;
+   display: inline-block;
+   transform: rotate(-45deg);
+   -webkit-transform: rotate(-45deg);
+}
+.arrow_r1{  /*arrow padding*/
+   padding: 8px 13px 8px 8px;
+}
+.arrow_l1{  /*arrow padding*/
+   padding: 8px 8px 8px 13px;
+}
+.arrow_r1:hover,.arrow_l1:hover{
+   background-color: #3f3c3c;
 }
