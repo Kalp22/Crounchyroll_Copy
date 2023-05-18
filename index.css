@@ -143,10 +143,16 @@ body{ /*no margin and padding*/
    padding: 5px 9px;
    font-size: 10.9px;
    color: white;
+   border-top: 3px solid #3f3c3c;
+}
+#p0{
+   background-color: rgb(63, 95, 109);
+   border-top-color: #969696;
 }
 .posterinfo:hover{
    background-color: #5c5c5c;
    cursor: pointer;
+   border-top-color: #5c5c5c;
 }
 
 /*Hindi Dubs Part*/
