@@ -1,5 +1,3 @@
-// let pstyle1 = backgroundColor = "rgb(63, 95, 109)"
-// let pstyle2 = borderTopColor = "#969696"
 let arrowl = document.getElementById('l_arrow');
 let arrowr = document.getElementById('r_arrow');
 
@@ -36,6 +34,7 @@ let pinfo = [
 
 let getpost = document.getElementById('postimg');
 let i = 0;
+let j = 0;
 
 const changepost = (a) => {
    if (a == 1) {
@@ -50,34 +49,44 @@ const changepost = (a) => {
          getpost.src = poster[i];
       }
    }
-   switch (i) {
-      case 0:
-         pinfo[0].style.backgroundColor = 'rgb(63, 95, 109)'
-         pinfo[0].style.borderTopColor = "#969696";
-         break;
-      case 1:
-         pinfo[1].style.backgroundColor = 'rgb(63, 95, 109)'
-         pinfo[1].style.borderTopColor = "#969696";
-         break;
-      case 2:
-         pinfo[2].style.backgroundColor = "rgb(63, 95, 109)"
-         pinfo[2].style.borderTopColor = "#969696";
-         break;
-      case 3:
-         pinfo[3].style.backgroundColor = "rgb(63, 95, 109)"
-         pinfo[3].style.borderTopColor = "#969696";
-         break;
-      case 4:
-         pinfo[4].style.backgroundColor = "rgb(63, 95, 109)"
-         pinfo[4].style.borderTopColor = "#969696";
-         break;
-      case 5:
-         pinfo[5].style.backgroundColor = "rgb(63, 95, 109)"
-         pinfo[5].style.borderTopColor = "#969696";
-         break;
 
-      default:
-         break;
+   if (i == 0) {
+      pinfo[0].style.backgroundColor = 'rgb(63, 95, 109)'
+      pinfo[0].style.borderTopColor = "#969696";
    }
+   else if (i == 1) {
+      pinfo[1].style.backgroundColor = 'rgb(63, 95, 109)'
+      pinfo[1].style.borderTopColor = "#969696";
+   }
+   else if (i == 2) {
+      pinfo[2].style.backgroundColor = 'rgb(63, 95, 109)'
+      pinfo[2].style.borderTopColor = "#969696";
+   }
+   else if (i == 3) {
+      pinfo[3].style.backgroundColor = 'rgb(63, 95, 109)'
+      pinfo[3].style.borderTopColor = "#969696";
+   }
+   else if (i == 4) {
+      pinfo[4].style.backgroundColor = 'rgb(63, 95, 109)'
+      pinfo[4].style.borderTopColor = "#969696";
+   }
+   else {
+      pinfo[5].style.backgroundColor = 'rgb(63, 95, 109)'
+      pinfo[5].style.borderTopColor = "#969696";
+   }
+   pinfo.map((elem) => {
+      if (j != i && a == 1) {
+         pinfo[j].style.backgroundColor = "#3f3c3c";
+         pinfo[j].style.borderTopColor = "#3f3c3c";
+         ++j;
+      }
+      else if (j != i && a == -1) {
+         pinfo[j].style.backgroundColor = "#3f3c3c";
+         pinfo[j].style.borderTopColor = "#3f3c3c";
+         --j;
+      }
+      else {
+         a = 0;
+      }
+   });
 }
-console.log(i);
