@@ -49,31 +49,15 @@ const changepost = (a) => {
          getpost.src = poster[i];
       }
    }
-
-   if (i == 0) {
-      pinfo[0].style.backgroundColor = 'rgb(63, 95, 109)'
-      pinfo[0].style.borderTopColor = "#969696";
-   }
-   else if (i == 1) {
-      pinfo[1].style.backgroundColor = 'rgb(63, 95, 109)'
-      pinfo[1].style.borderTopColor = "#969696";
-   }
-   else if (i == 2) {
-      pinfo[2].style.backgroundColor = 'rgb(63, 95, 109)'
-      pinfo[2].style.borderTopColor = "#969696";
-   }
-   else if (i == 3) {
-      pinfo[3].style.backgroundColor = 'rgb(63, 95, 109)'
-      pinfo[3].style.borderTopColor = "#969696";
-   }
-   else if (i == 4) {
-      pinfo[4].style.backgroundColor = 'rgb(63, 95, 109)'
-      pinfo[4].style.borderTopColor = "#969696";
-   }
-   else {
-      pinfo[5].style.backgroundColor = 'rgb(63, 95, 109)'
-      pinfo[5].style.borderTopColor = "#969696";
-   }
+   pinfo[i].style.backgroundColor = 'rgb(63, 95, 109)'
+   pinfo[i].style.borderTopColor = "#969696";
+   // pinfo[i].hover(() => {
+   //    (this).backgroundColor = 'rgb(106,126,134)'
+   // },() => {
+   //    (this).backgroundColor = 'rgb(63, 95, 109)'
+   //    (this).borderTopColor = "#969696";
+   // }
+   // )
    pinfo.map((elem) => {
       if (j != i && a == 1) {
          pinfo[j].style.backgroundColor = "#3f3c3c";
