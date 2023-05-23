@@ -51,13 +51,6 @@ const changepost = (a) => {
    }
    pinfo[i].style.backgroundColor = 'rgb(63, 95, 109)'
    pinfo[i].style.borderTopColor = "#969696";
-   // pinfo[i].hover(() => {
-   //    (this).backgroundColor = 'rgb(106,126,134)'
-   // },() => {
-   //    (this).backgroundColor = 'rgb(63, 95, 109)'
-   //    (this).borderTopColor = "#969696";
-   // }
-   // )
    pinfo.map((elem) => {
       if (j != i && a == 1) {
          pinfo[j].style.backgroundColor = "#3f3c3c";
@@ -73,4 +66,11 @@ const changepost = (a) => {
          a = 0;
       }
    });
+   pinfo[i].hover(() => {
+      (this).backgroundColor = 'rgb(106,126,134)'
+   },() => {
+      (this).backgroundColor = 'rgb(63, 95, 109)'
+      (this).borderTopColor = "#969696";
+   }
+   )
 }
