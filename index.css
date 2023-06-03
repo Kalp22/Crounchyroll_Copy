@@ -1,4 +1,5 @@
 body{ /*no margin and padding*/
+   scroll-behavior: smooth;
    margin: 0;
    padding: 0;
    font-family: sans-serif;
@@ -7,11 +8,10 @@ body{ /*no margin and padding*/
 
 /*Header*/
 .header{  /*header Flex*/
-   position: fixed absolute;
    display: flex;
    background-color: #222222;
    color: white; 
-   width: auto;
+   /* width: 98.8%; */
    justify-content: space-between; 
    padding-left: 17px; 
 }
@@ -94,8 +94,8 @@ body{ /*no margin and padding*/
    display: flex;
    justify-content: space-around;
    align-items: center;
-   background: rgb(214,125,29);
-   background: radial-gradient(circle, rgba(214,125,29,1) 35%, rgba(255,201,0,1) 100%); 
+   background: rgb(37,64,61);
+   background: radial-gradient(circle, rgba(37,64,61,1) 35%, rgba(3,22,20,1) 100%); 
 }
 .left_arrow{  /*left arrow design*/
    border: solid black;
@@ -141,18 +141,15 @@ body{ /*no margin and padding*/
    height: 40px;
    width: 145px;
    padding: 5px 9px;
-   font-size: 10.9px;
+   font-size: 12px;
    color: white;
    border-top: 3px solid #3f3c3c;
+   cursor: pointer;
+   font-weight: bold;
 }
 #p0{
    background-color: rgb(63, 95, 109);
    border-top-color: #969696;
-}
-.posterinfo:hover{
-   background-color: #5c5c5c;
-   cursor: pointer;
-   border-top-color: #5c5c5c;
 }
 
 /*Hindi Dubs Part*/
@@ -169,11 +166,11 @@ body{ /*no margin and padding*/
    display: flex;
    align-items: center;
    width: 100%;
-   justify-content: center;
+   justify-content: space-evenly;
 }
 .scrolling_shows{
    display: flex;
-   align-items: start;
+   align-items: center;
    justify-content: space-between;
    width: 79.2%;
 }
@@ -208,9 +205,11 @@ body{ /*no margin and padding*/
    -webkit-transform: rotate(-45deg);
 }
 .arrow_r1{  /*arrow padding*/
+   cursor: pointer;
    padding: 8px 13px 8px 8px;
 }
 .arrow_l1{  /*arrow padding*/
+   cursor: pointer;
    padding: 8px 8px 8px 13px;
 }
 .arrow_r1:hover,.arrow_l1:hover{

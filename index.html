@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
    <title>Crunchyroll</title>
    <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
    <div class="header">
       <div class="header_left">
@@ -35,43 +37,46 @@
       <div class="header_right">
          <div class="premium"><img class="crown" src="Images/PngItem_7862.png" alt="">
             <p class="premium_text">
-             <b style="color: rgb(255, 187, 0);"> TRY FREE </b><br> PREMIUM
+               <b style="color: rgb(255, 187, 0);"> TRY FREE </b><br> PREMIUM
             </p>
          </div>
-         <div class="search"><img class="pngs" src="Images/explore+find+magnifier+search+icon-1320185008030646474.png" alt=""></div>
+         <div class="search"><img class="pngs" src="Images/explore+find+magnifier+search+icon-1320185008030646474.png"
+               alt=""></div>
          <div class="watchlist"><img class="pngs" src="images/pngwing.com1.png" alt=""></div>
          <div class="account"><img class="pngs" src="Images/pngwing.com.png" alt=""></div>
       </div>
    </div>
-   <div class="watch_now">
-      <div class="arrow_l" id="l_arrow" onmouseover="hoverarrowl()" onmouseout="nohoverarrowl()" onclick="changepost(-1)">
+   <div class="watch_now" id="colour">
+      <div class="arrow_l" id="l_arrow" onmouseover="hoverarrowl()" onmouseout="nohoverarrowl()"
+         onclick="changepost(-1)">
          <div class="left_arrow" id="arrow_l"></div>
       </div>
       <div class="poster">
-         <img class="poster_image" src="Images/Demon S.jpg" alt="" id="postimg">
+         <img class="poster_image" src="Images/Demon S.webp" alt="" id="postimg">
       </div>
-      <div class="arrow_r" id="r_arrow" onmouseover="hoverarrowr()" onmouseout="nohoverarrowr()" onclick="changepost(1)">
+      <div class="arrow_r" id="r_arrow" onmouseover="hoverarrowr()" onmouseout="nohoverarrowr()"
+         onclick="changepost(1)">
          <div class="right_arrow" id="arrow_r"></div>
       </div>
    </div>
    <div class="pinfo_wrap">
-      <div class="posterinfo" id="p0" data-style="style2">
-         Demon Slayer Swordsmith Village Arc
+      <div class="posterinfo" id="p0" onclick="post(0)">
+         DEMON SLAYER
       </div>
-      <div class="posterinfo" id="p1" data-style="style1">
-         Dr. Stone Season 3
+      <div class="posterinfo" id="p1" onclick="post(1)">
+         DR. STONE
       </div>
-      <div class="posterinfo" id="p2" data-style="style1">
-         My Clueless First Friend
+      <div class="posterinfo" id="p2" onclick="post(2)">
+         JUJUTSU KAISEN
       </div>
-      <div class="posterinfo" id="p3" data-style="style1">
-         Oshi No Ko
+      <div class="posterinfo" id="p3" onclick="post(3)">
+         OSHI NO KO
       </div>
-      <div class="posterinfo" id="p4" data-style="style1">
-         My Hero Academia Season 6
+      <div class="posterinfo" id="p4" onclick="post(4)">
+         ONE PIECE
       </div>
-      <div class="posterinfo" id="p5" data-style="style1">
-         The Ancient Magus' Bride Season 2
+      <div class="posterinfo" id="p5" onclick="post(5)">
+         ATTACK ON TITAN
       </div>
    </div>
    <div class="hindi_dub">
@@ -80,16 +85,16 @@
       <div class="hr_hindi"></div>
    </div>
    <div class="shows_scroll">
-      <div class="arrow_l1">
+      <div class="arrow_l1" onclick="hinddiv(-1)" id="hinarl">
          <div class="left_arrow1"></div>
       </div>
       <div class="scrolling_shows">
          <div class="shows1">
             <div>
-               <img src="Images/DemonSlayer.jpeg" alt="" class="card_img1">
+               <img src="Images/DemonSlayer.jpeg" alt="" class="card_img1" id="ih1">
             </div>
             <div class="card_name1">
-               <span style="font-size: 13px;">Demon Slayer: Kimetsu no Yaiba</span>
+               <span style="font-size: 13px;" id="ht1">Demon Slayer</span>
                <div style="display: flex; font-size: 13px;">
                   <p style="color: rgb(42, 189, 187);">Series </p>
                   <p style="color: #9c9c9c;"> Sub | Dub</p>
@@ -98,10 +103,10 @@
          </div>
          <div class="shows1">
             <div>
-               <img src="Images/Radiant.jpeg" alt="" class="card_img1">
+               <img src="Images/Radiant.jpeg" alt="" class="card_img1" id="ih2">
             </div>
             <div class="card_name1">
-               <span style="font-size: 13px;">RADIANT</span>        
+               <span style="font-size: 13px;" id="ht2">RADIANT</span>
                <div style="display: flex; font-size: 13px;">
                   <p style="color: rgb(42, 189, 187);">Series</p>
                   <p style="color: #9c9c9c;">Sub | Dub</p>
@@ -110,10 +115,10 @@
          </div>
          <div class="shows1">
             <div>
-               <img src="Images/RankingofKings.jpeg" alt="" class="card_img1">
+               <img src="Images/RankingofKings.jpeg" alt="" class="card_img1" id="ih3">
             </div>
             <div class="card_name1">
-               <span style="font-size: 13px;">Ranking of Kings</span>
+               <span style="font-size: 13px;" id="ht3">Ranking of Kings</span>
                <div style="display: flex; font-size: 13px;">
                   <p style="color: rgb(42, 189, 187);">Series </p>
                   <p style="color: #9c9c9c;"> Sub | Dub</p>
@@ -122,10 +127,10 @@
          </div>
          <div class="shows1">
             <div>
-               <img src="Images/TheCaseStudyofVanitas.jpeg" alt="" class="card_img1">
+               <img src="Images/TheCaseStudyofVanitas.jpeg" alt="" class="card_img1" id="ih4">
             </div>
             <div class="card_name1">
-               <span style="font-size: 13px;">The Case Study of Vanitas</span>
+               <span style="font-size: 13px;" id="ht4">The Case Study of Vanitas</span>
                <div style="display: flex; font-size: 13px;">
                   <p style="color: rgb(42, 189, 187);">Series </p>
                   <p style="color: #9c9c9c;"> Sub | Dub</p>
@@ -134,10 +139,10 @@
          </div>
          <div class="shows1">
             <div>
-               <img src="Images/VinlandSaga2.jpeg" alt="" class="card_img1">
+               <img src="Images/VinlandSaga2.jpeg" alt="" class="card_img1" id="ih5">
             </div>
             <div class="card_name1">
-               <span style="font-size: 13px;">VINLAND SAGA</span>
+               <span style="font-size: 13px;" id="ht5">VINLAND SAGA</span>
                <div style="display: flex; font-size: 13px;">
                   <p style="color: rgb(42, 189, 187);">Series </p>
                   <p style="color: #9c9c9c;"> Sub | Dub</p>
@@ -146,10 +151,10 @@
          </div>
          <div class="shows1">
             <div>
-               <img src="Images/MyDressUpDarling.jpeg" alt="" class="card_img1">
+               <img src="Images/MyDressUpDarling.jpeg" alt="" class="card_img1" id="ih6">
             </div>
             <div class="card_name1">
-               <span style="font-size: 13px;">My Dress-Up Darling</span>
+               <span style="font-size: 13px;" id="ht6">My Dress-Up Darling</span>
                <div style="display: flex; font-size: 13px;">
                   <p style="color: rgb(42, 189, 187);">Series </p>
                   <p style="color: #9c9c9c;"> Sub | Dub</p>
@@ -157,10 +162,11 @@
             </div>
          </div>
       </div>
-      <div class="arrow_r1">
+      <div class="arrow_r1" onclick="hinddiv(1)" id="hinarr">
          <div class="right_arrow1"></div>
       </div>
    </div>
    <script src="index.js"></script>
 </body>
+
 </html>
