@@ -6,7 +6,7 @@ const News = document.getElementById("News");
 const NewsExpand = document.getElementById('NewsClick');
 let w = true;
 
-let poster = [
+const poster = [
    {
       image: "Images/Demon S.webp",
       colour: "rgb(37,64,61)",
@@ -39,32 +39,54 @@ let poster = [
    }
 ];
 
-let hinddivs = [
-   {image: "Images/DemonSlayer.jpeg", 
-   contents: "Demon Slayer" },
-   {image: "Images/Radiant.jpeg", 
-   contents: "RADIANT" },
-   {image: "Images/RankingofKings.jpeg", 
-   contents: "Ranking of Kings" },
-   {image: "Images/TheCaseStudyofVanitas.jpeg", 
-   contents: "The Case Study of Vanitas" },
-   {image: "Images/VinlandSaga2.jpeg", 
-   contents: "VINLAND SAGA" },
-   {image: "Images/MyDressUpDarling.jpeg", 
-   contents: "My Dress-Up Darling" },
-   {image: "Images/Spy Family.jpeg", 
-   contents: "Spy Family" },
-   {image: "Images/Naruto Shippuden.jpeg", 
-   contents: "Naruto Shippuden" },
-   {image: "Images/OPM.jpeg", 
-   contents: "One Punch Man" },
-   {image: "Images/JJBA.jpeg", 
-   contents: "JoJo's Bizarre Adventure" },
-   {image: "Images/Darling in the Franxx.jpeg", 
-   contents: "Darling in the Franxx" }
+const hinddivs = [
+   {
+      image: "Images/DemonSlayer.jpeg",
+      contents: "Demon Slayer"
+   },
+   {
+      image: "Images/Radiant.jpeg",
+      contents: "RADIANT"
+   },
+   {
+      image: "Images/RankingofKings.jpeg",
+      contents: "Ranking of Kings"
+   },
+   {
+      image: "Images/TheCaseStudyofVanitas.jpeg",
+      contents: "The Case Study of Vanitas"
+   },
+   {
+      image: "Images/VinlandSaga2.jpeg",
+      contents: "VINLAND SAGA"
+   },
+   {
+      image: "Images/MyDressUpDarling.jpeg",
+      contents: "My Dress-Up Darling"
+   },
+   {
+      image: "Images/Spy Family.jpeg",
+      contents: "Spy Family"
+   },
+   {
+      image: "Images/Naruto Shippuden.jpeg",
+      contents: "Naruto Shippuden"
+   },
+   {
+      image: "Images/OPM.jpeg",
+      contents: "One Punch Man"
+   },
+   {
+      image: "Images/JJBA.jpeg",
+      contents: "JoJo's Bizarre Adventure"
+   },
+   {
+      image: "Images/Darling in the Franxx.jpeg",
+      contents: "Darling in the Franxx"
+   }
 ];
 
-let pinfo = [
+const pinfo = [
    document.getElementById('p0'),
    document.getElementById('p1'),
    document.getElementById('p2'),
@@ -73,34 +95,34 @@ let pinfo = [
    document.getElementById('p5')
 ];
 
-let getpost = document.getElementById('postimg');
-let getcol = document.getElementById('colour');
+const getpost = document.getElementById('postimg');
+const getcol = document.getElementById('colour');
 let i = 0;
 let j = 0;
 
-function hoverarrowl() {
+const hoverarrowl = () => {
    document.getElementById("arrow_l").style.borderColor = "white"
 }
-function hoverarrowr(z) {
-   if(z == 0){
+const hoverarrowr = (z) => {
+   if (z == 0) {
       document.getElementById("arrow_r").style.borderColor = "white"
    }
-   if(z == 1){
-      if(q){
+   if (z == 1) {
+      if (q) {
          Browse.style.backgroundColor = "rgb(131, 130, 130)"
       }
    }
-   if(z == 2){
-      if(w){
+   if (z == 2) {
+      if (w) {
          News.style.backgroundColor = "rgb(131, 130, 130)";
       }
    }
 }
-function nohoverarrowl() {
+const nohoverarrowl = () => {
    document.getElementById("arrow_l").style.borderColor = "black"
 }
-function nohoverarrowr(z) {
-   if(z == 0){
+const nohoverarrowr=(z)=> {
+   if (z == 0) {
       document.getElementById("arrow_r").style.borderColor = "black"
    }
    if (z == 1) {
@@ -191,7 +213,7 @@ const hinddiv = (x) => {
       ih6.src = hinddivs[10].image
       ht6.innerHTML = hinddivs[10].contents
       // hinarr.style.display = "ruby-base-container";
-   } 
+   }
    else {
       ih1.src = hinddivs[0].image
       ht1.innerHTML = hinddivs[0].contents
@@ -208,14 +230,14 @@ const hinddiv = (x) => {
    }
 }
 
-Browse.addEventListener('click',()=>{
-   if(q && w){
+Browse.addEventListener('click', () => {
+   if (q && w) {
       BrowseExpand.style.display = "flex";
       Browse.style.backgroundColor = "#141414"
       q = false;
    }
-   else{
-      if(w === false){
+   else {
+      if (w === false) {
          NewsExpand.style.display = "none";
          News.style.backgroundColor = "#222222";
          w = true;
@@ -223,7 +245,7 @@ Browse.addEventListener('click',()=>{
          Browse.style.backgroundColor = "#141414"
          q = false;
       }
-      else{
+      else {
          BrowseExpand.style.display = "none";
          Browse.style.backgroundColor = "#222222"
          q = true;
@@ -231,14 +253,14 @@ Browse.addEventListener('click',()=>{
    }
 })
 
-News.addEventListener('click',()=>{
-   if(w && q){
+News.addEventListener('click', () => {
+   if (w && q) {
       NewsExpand.style.display = "flex";
       News.style.backgroundColor = "#141414";
       w = false;
    }
-   else{
-      if(q === false){
+   else {
+      if (q === false) {
          BrowseExpand.style.display = "none";
          Browse.style.backgroundColor = "#222222"
          q = true;
@@ -246,7 +268,7 @@ News.addEventListener('click',()=>{
          News.style.backgroundColor = "#141414";
          w = false;
       }
-      else{
+      else {
          NewsExpand.style.display = "none";
          News.style.backgroundColor = "#222222";
          w = true;
