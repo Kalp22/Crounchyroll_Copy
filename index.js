@@ -1,15 +1,10 @@
-function hoverarrowl() {
-   document.getElementById("arrow_l").style.borderColor = "white"
-}
-function hoverarrowr() {
-   document.getElementById("arrow_r").style.borderColor = "white"
-}
-function nohoverarrowl() {
-   document.getElementById("arrow_l").style.borderColor = "black"
-}
-function nohoverarrowr() {
-   document.getElementById("arrow_r").style.borderColor = "black"
-}
+const Browse = document.getElementById('browse');
+const BrowseExpand = document.getElementById('BrowseClick');
+let q = true;
+
+const News = document.getElementById("News");
+const NewsExpand = document.getElementById('NewsClick');
+let w = true;
 
 let poster = [
    {
@@ -83,6 +78,48 @@ let getcol = document.getElementById('colour');
 let i = 0;
 let j = 0;
 
+function hoverarrowl() {
+   document.getElementById("arrow_l").style.borderColor = "white"
+}
+function hoverarrowr(z) {
+   if(z == 0){
+      document.getElementById("arrow_r").style.borderColor = "white"
+   }
+   if(z == 1){
+      if(q){
+         Browse.style.backgroundColor = "rgb(131, 130, 130)"
+      }
+   }
+   if(z == 2){
+      if(w){
+         News.style.backgroundColor = "rgb(131, 130, 130)";
+      }
+   }
+}
+function nohoverarrowl() {
+   document.getElementById("arrow_l").style.borderColor = "black"
+}
+function nohoverarrowr(z) {
+   if(z == 0){
+      document.getElementById("arrow_r").style.borderColor = "black"
+   }
+   if (z == 1) {
+      if (q) {
+         Browse.style.backgroundColor = "#222222";
+      } else {
+         Browse.style.backgroundColor = "#141414"
+      }
+   }
+   if (z == 2) {
+      if (w) {
+         News.style.backgroundColor = "#222222";
+      } else {
+         News.style.backgroundColor = "#141414"
+      }
+   }
+}
+
+
 const changepost = (a) => {
    if (a == 1) {
       if (i < 5) {
@@ -153,7 +190,7 @@ const hinddiv = (x) => {
       ht5.innerHTML = hinddivs[9].contents
       ih6.src = hinddivs[10].image
       ht6.innerHTML = hinddivs[10].contents
-      // hinarr.style.content = "none";
+      // hinarr.style.display = "ruby-base-container";
    } 
    else {
       ih1.src = hinddivs[0].image
@@ -168,6 +205,51 @@ const hinddiv = (x) => {
       ht5.innerHTML = hinddivs[4].contents
       ih6.src = hinddivs[5].image
       ht6.innerHTML = hinddivs[5].contents
-      // hinarl.style.content = "none";
    }
 }
+
+Browse.addEventListener('click',()=>{
+   if(q && w){
+      BrowseExpand.style.display = "flex";
+      Browse.style.backgroundColor = "#141414"
+      q = false;
+   }
+   else{
+      if(w === false){
+         NewsExpand.style.display = "none";
+         News.style.backgroundColor = "#222222";
+         w = true;
+         BrowseExpand.style.display = "flex";
+         Browse.style.backgroundColor = "#141414"
+         q = false;
+      }
+      else{
+         BrowseExpand.style.display = "none";
+         Browse.style.backgroundColor = "#222222"
+         q = true;
+      }
+   }
+})
+
+News.addEventListener('click',()=>{
+   if(w && q){
+      NewsExpand.style.display = "flex";
+      News.style.backgroundColor = "#141414";
+      w = false;
+   }
+   else{
+      if(q === false){
+         BrowseExpand.style.display = "none";
+         Browse.style.backgroundColor = "#222222"
+         q = true;
+         NewsExpand.style.display = "flex";
+         News.style.backgroundColor = "#141414";
+         w = false;
+      }
+      else{
+         NewsExpand.style.display = "none";
+         News.style.backgroundColor = "#222222";
+         w = true;
+      }
+   }
+})

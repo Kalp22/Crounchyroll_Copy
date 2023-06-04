@@ -16,7 +16,7 @@
             <img class="crunchyroll" src="Images/Crunchyroll.png" alt="">
          </div>
          <div class="header_mid">
-            <div class="browse_button">
+            <div class="browse_button" id="browse" onmouseover="hoverarrowr(1)" onmouseout="nohoverarrowr(1)">
                <span>Browse</span>
                <div><img class="dropdown" src="Images/drop-down-solid-32.png" alt=""></div>
             </div>
@@ -26,7 +26,7 @@
             <div class="games">
                Games
             </div>
-            <div class="news_button">
+            <div class="news_button" id="News" onmouseover="hoverarrowr(2)" onmouseout="nohoverarrowr(2)">
                <span class="news">
                   News
                </span>
@@ -46,7 +46,7 @@
          <div class="account"><img class="pngs" src="Images/pngwing.com.png" alt=""></div>
       </div>
    </div>
-   <div class="browse_click">
+   <div class="browse_click" id="BrowseClick">
       <div class="browse_class">
          <div class="bclass_items">Popular</div>
          <div class="bclass_items">New</div>
@@ -79,6 +79,12 @@
          </div>
       </div>
    </div>
+   <div class="news_click" id="NewsClick">
+      <div class="news_content">All News</div>
+      <div class="news_content">Anime Awards</div>
+      <div class="news_content">Crunchyroll Expo</div>
+      <div class="news_content">Anime Movie Night</div>
+   </div>
    <div class="watch_now" id="colour">
       <div class="arrow_l" id="l_arrow" onmouseover="hoverarrowl()" onmouseout="nohoverarrowl()"
          onclick="changepost(-1)">
@@ -87,7 +93,7 @@
       <div class="poster">
          <img class="poster_image" src="Images/Demon S.webp" alt="" id="postimg">
       </div>
-      <div class="arrow_r" id="r_arrow" onmouseover="hoverarrowr()" onmouseout="nohoverarrowr()"
+      <div class="arrow_r" id="r_arrow" onmouseover="hoverarrowr(0)" onmouseout="nohoverarrowr(0)"
          onclick="changepost(1)">
          <div class="right_arrow" id="arrow_r"></div>
       </div>

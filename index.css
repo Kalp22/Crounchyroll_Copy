@@ -9,12 +9,16 @@ body{ /*no margin and padding*/
 
 /*Header*/
 .header{  /*header Flex*/
-   display: flex;
+   display: inline-flex;
+   position: sticky;
+   top: 0px;
    background-color: #222222;
    color: white; 
-   /* width: 98.8%; */
+   width: 98.8%;
+   height: 65px;
    justify-content: space-between; 
    padding-left: 17px; 
+   margin-top: 0px;
 }
 .header_left,.header_mid{  /*header left and mid flex*/
    display: flex;
@@ -55,7 +59,7 @@ body{ /*no margin and padding*/
 }
 .logo:hover{  /*logo hover color change*/
    content: url(Images/kindpng_4935488.png);
-   padding: 17px 12px 18.5px 10px;
+   padding: 14px 12px 16px 10px;
    width: 135px;
    cursor: pointer;
 }
@@ -89,10 +93,13 @@ body{ /*no margin and padding*/
 }
 
 .browse_click{
-   display: flex;
+   display: none;
+   position: fixed;
    background-color: #141414;
+   width: 100%;
+   top: 65px; 
    padding: 30px 0px 20px 150px;
-   font-size: 15px;
+   font-size: 13px;
 }
 .browse_class{
    display: flex;
@@ -105,7 +112,13 @@ body{ /*no margin and padding*/
    background-color: #2a2b29;
 }
 .bgenre_items{
-   padding: 12px 19px 12px 17px;
+   padding: 12px 15px 12px 15px;
+   width: 170px;
+   
+}
+.genre{
+   color: #969696;
+   padding: 0px 0px 12px 15px;
 
 }
 .browse_line{
@@ -113,13 +126,35 @@ body{ /*no margin and padding*/
    margin: 0px 40px;
 }
 .browse_genre{
-   margin: 8px 20px 0px 20px;
+   margin: 8px 20px 0px 10px;
    
 }
 .genre_wrapper{
    display: grid;
    grid-template-columns: repeat(3,1fr);
 
+}
+
+.news_click{
+   display: none;
+   flex-direction: column;
+   position: fixed;
+   font-size: 15px;
+   top: 65px;
+   width: 300px;
+   left: 455px; 
+   height: 200px;
+   padding-top: 8px;
+   background-color: #141414;
+}
+.news_content{
+   width: 260px;
+   height: 28px;
+   padding: 10px 15px 10px 20px;
+}
+.news_content:hover{
+   background-color: #969696;
+   cursor: pointer;
 }
 
 /*Slider below Header*/
@@ -133,20 +168,17 @@ body{ /*no margin and padding*/
    background: radial-gradient(circle, rgba(37,64,61,1) 35%, rgba(3,22,20,1) 100%); 
 }
 .left_arrow{  /*left arrow design*/
+   /* display: contents; */
    border: solid black;
-   border-width: 0px 3px 3px 0px;
+   border-width: 3px 0px 0px 3px;
    padding: 5px;
-   display: inline-block;
-   transform: rotate(135deg);
-   -webkit-transform: rotate(135deg);
+   transform: rotate(-45deg);
 }
 .right_arrow{  /*right arrow design*/
    border: solid black;
    border-width: 0px 3px 3px 0px;
    padding: 5px;
-   display: inline-block;
    transform: rotate(-45deg);
-   -webkit-transform: rotate(-45deg);
 }
 .poster_image{  /*centre poster image of trending anime*/
    height: 350px;
