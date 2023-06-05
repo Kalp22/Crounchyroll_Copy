@@ -1,3 +1,17 @@
+const Body = [
+   document.getElementById("colour"),
+   document.getElementById('pInfoWrap'),
+   document.getElementById('hindiDub'),
+   document.getElementById('showsScroll')
+];
+const Head = [
+   document.getElementById('head'),
+   document.getElementById('BrowseClick'),
+   document.getElementById('searchClick'),
+   document.getElementById('NewsClick')
+]
+let r = false;
+
 const Browse = document.getElementById('browse');
 const BrowseExpand = document.getElementById('BrowseClick');
 let q = true;
@@ -5,6 +19,13 @@ let q = true;
 const News = document.getElementById("News");
 const NewsExpand = document.getElementById('NewsClick');
 let w = true;
+
+const Premium = document.getElementById("Premium");
+const PremiumExpand = document.getElementById('premiumHover');
+
+const Search = document.getElementById('Search');
+const SearchExpand = document.getElementById('searchClick');
+let e = true;
 
 const poster = [
    {
@@ -117,11 +138,16 @@ const hoverarrowr = (z) => {
          News.style.backgroundColor = "rgb(131, 130, 130)";
       }
    }
+   if (z == 3) {
+      if (e) {
+         Search.style.backgroundColor = "rgb(131, 130, 130)";
+      }
+   }
 }
 const nohoverarrowl = () => {
    document.getElementById("arrow_l").style.borderColor = "black"
 }
-const nohoverarrowr=(z)=> {
+const nohoverarrowr = (z) => {
    if (z == 0) {
       document.getElementById("arrow_r").style.borderColor = "black"
    }
@@ -137,6 +163,13 @@ const nohoverarrowr=(z)=> {
          News.style.backgroundColor = "#222222";
       } else {
          News.style.backgroundColor = "#141414"
+      }
+   }
+   if (z == 3) {
+      if (e) {
+         Search.style.backgroundColor = "#222222";
+      } else {
+         Search.style.backgroundColor = "#141414"
       }
    }
 }
@@ -212,7 +245,6 @@ const hinddiv = (x) => {
       ht5.innerHTML = hinddivs[9].contents
       ih6.src = hinddivs[10].image
       ht6.innerHTML = hinddivs[10].contents
-      // hinarr.style.display = "ruby-base-container";
    }
    else {
       ih1.src = hinddivs[0].image
@@ -231,10 +263,11 @@ const hinddiv = (x) => {
 }
 
 Browse.addEventListener('click', () => {
-   if (q && w) {
+   if (q && w && e) {
       BrowseExpand.style.display = "flex";
       Browse.style.backgroundColor = "#141414"
       q = false;
+      r = true;
    }
    else {
       if (w === false) {
@@ -244,20 +277,32 @@ Browse.addEventListener('click', () => {
          BrowseExpand.style.display = "flex";
          Browse.style.backgroundColor = "#141414"
          q = false;
+         r = true;
+      }
+      else if (e === false) {
+         SearchExpand.style.display = 'none';
+         Search.style.backgroundColor = "#222222";
+         e = true;
+         BrowseExpand.style.display = "flex";
+         Browse.style.backgroundColor = "#141414"
+         q = false;
+         r = true;
       }
       else {
          BrowseExpand.style.display = "none";
          Browse.style.backgroundColor = "#222222"
          q = true;
+         r = false;
       }
    }
 })
 
 News.addEventListener('click', () => {
-   if (w && q) {
+   if (w && q && e) {
       NewsExpand.style.display = "flex";
       News.style.backgroundColor = "#141414";
       w = false;
+      r = true;
    }
    else {
       if (q === false) {
@@ -267,11 +312,87 @@ News.addEventListener('click', () => {
          NewsExpand.style.display = "flex";
          News.style.backgroundColor = "#141414";
          w = false;
+         r = true;
+      }
+      else if (e === false) {
+         SearchExpand.style.display = 'none';
+         Search.style.backgroundColor = "#222222";
+         e = true;
+         NewsExpand.style.display = "flex";
+         News.style.backgroundColor = "#141414";
+         w = false;
+         r = true;
       }
       else {
          NewsExpand.style.display = "none";
          News.style.backgroundColor = "#222222";
          w = true;
+         r = false;
       }
    }
 })
+
+Premium.addEventListener("mouseover", () => {
+   if (q && e) {
+      PremiumExpand.style.display = 'flex';
+   }
+})
+Premium.addEventListener("mouseout", () => {
+   PremiumExpand.style.display = 'none';
+})
+
+Search.addEventListener('click', () => {
+   if (e && w && q) {
+      SearchExpand.style.display = 'flex';
+      Search.style.backgroundColor = "#141414";
+      e = false;
+      r = true;
+   }
+   else {
+      if (w === false) {
+         NewsExpand.style.display = "none";
+         News.style.backgroundColor = "#222222";
+         w = true;
+         SearchExpand.style.display = 'flex';
+         Search.style.backgroundColor = "#141414";
+         e = false;
+         r = true;
+      }
+      else if (q === false) {
+         BrowseExpand.style.display = "none";
+         Browse.style.backgroundColor = "#222222"
+         q = true;
+         SearchExpand.style.display = 'flex';
+         Search.style.backgroundColor = "#141414";
+         e = false;
+         r = true;
+      }
+      else {
+         SearchExpand.style.display = 'none';
+         Search.style.backgroundColor = "#222222";
+         e = true;
+         r = false;
+      }
+   }
+})
+
+Body.forEach(element => {
+   element.addEventListener('click', () => {
+      SearchExpand.style.display = 'none';
+      Search.style.backgroundColor = "#222222";
+      e = true;
+      BrowseExpand.style.display = "none";
+      Browse.style.backgroundColor = "#222222"
+      q = true;
+      NewsExpand.style.display = "none";
+      News.style.backgroundColor = "#222222";
+      w = true;
+      r = false;
+   })
+});
+
+// if (r) {
+//    Head.forEach(ele => {
+//       ele.style.backdropFilter = 'blur(1px)';
+//    })
+// }
