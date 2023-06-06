@@ -1,4 +1,5 @@
-body{ /*no margin and padding*/
+body {
+   /*no margin and padding*/
    scroll-behavior: smooth;
    margin: 0;
    padding: 0;
@@ -8,161 +9,211 @@ body{ /*no margin and padding*/
 }
 
 /*Header*/
-.header{  /*header Flex*/
+.header {
+   /*header Flex*/
    display: inline-flex;
    position: sticky;
    top: 0px;
    background-color: #222222;
-   color: white; 
+   color: white;
    width: 98.8%;
    height: 65px;
-   justify-content: space-between; 
-   padding-left: 17px; 
+   justify-content: space-between;
+   padding-left: 17px;
    margin-top: 0px;
 }
-.header_left,.header_mid{  /*header left and mid flex*/
+
+.header_left,
+.header_mid {
+   /*header left and mid flex*/
    display: flex;
    justify-content: flex-start;
 }
-.header_right{  /*header right flex*/
+
+.header_right {
+   /*header right flex*/
    display: flex;
    justify-content: flex-end;
 }
 
-.manga,.games{    /*manga and games padding*/
+.manga,
+.games {
+   /*manga and games padding*/
    padding: 19px 17px 15px 17px;
 }
-.browse_button,.news_button{  /*browse and news button padding*/
+
+.browse_button,
+.news_button {
+   /*browse and news button padding*/
    padding: 19px 17px 15px 17px;
    display: flex;
 }
-.dropdown{  /*dropdown arrow on browse and news*/
+
+.dropdown {
+   /*dropdown arrow on browse and news*/
    height: 10px;
    padding: 0px 5px 0px 10px;
 }
-.search,.watchlist,.account{  /*premium,search,watchlist,account padding*/
+
+.search,
+.watchlist,
+.account {
+   /*premium,search,watchlist,account padding*/
    padding: 18px 20px;
 }
-.pngs{  /*.png sizing*/
+
+.pngs {
+   /*.png sizing*/
    width: 20px;
    height: 20px;
    color: #5a5959;
 }
-.crunchyroll{   /*crunchyroll logo sizing*/
+
+.crunchyroll {
+   /*crunchyroll logo sizing*/
    height: 25px;
    width: 135px;
 }
 
-.logo{  /*logo positioning*/
+.logo {
+   /*logo positioning*/
    align-self: center;
    padding: 17px 12px 17px 10px;
 }
-.logo:hover{  /*logo hover color change*/
+
+.logo:hover {
+   /*logo hover color change*/
    content: url(Images/kindpng_4935488.png);
    padding: 14px 12px 16px 10px;
    width: 135px;
    cursor: pointer;
 }
 
-.manga:hover,.games:hover,.news_button:hover,.browse_button:hover{  /*hover effects*/
+.manga:hover,
+.games:hover,
+.news_button:hover,
+.browse_button:hover {
+   /*hover effects*/
    background-color: rgb(131, 130, 130);
    cursor: pointer;
 }
-.search:hover,.watchlist:hover,.account:hover{  /*hover effects*/
+
+.search:hover,
+.watchlist:hover,
+.account:hover {
+   /*hover effects*/
    background-color: rgb(148, 142, 142);
    cursor: pointer;
 }
 
-.premium{
+.premium {
    display: flex;
    padding: 4px 25px;
 }
-.premium:hover{  /*hover effects*/
+
+.premium:hover {
+   /*hover effects*/
    background-color: rgb(117, 112, 112);
    cursor: pointer;
 }
-.premium_text{  /*specific text*/
+
+.premium_text {
+   /*specific text*/
    font-size: 11px;
    text-align: center;
 }
-.crown{  /*crown image*/
+
+.crown {
+   /*crown image*/
    align-self: center;
    width: 22px;
    height: 15px;
    padding: 0px 7px 0px 0px;
 }
 
-.browse_click{
+.browse_click {
    display: none;
    position: fixed;
    background-color: #141414;
    width: 100%;
-   top: 65px; 
+   top: 65px;
    padding: 30px 0px 20px 150px;
    font-size: 13px;
 }
-.browse_class{
+
+.browse_class {
    display: flex;
    flex-direction: column;
 }
-.bclass_items{
+
+.bclass_items {
    padding: 12px 19px 12px 17px;
 }
-.bclass_items:hover,.bgenre_items:hover{
+
+.bclass_items:hover,
+.bgenre_items:hover {
    background-color: #2a2b29;
    cursor: pointer;
 }
-.bgenre_items{
+
+.bgenre_items {
    padding: 12px 15px 12px 15px;
    width: 170px;
-   
+
 }
-.genre{
+
+.genre {
    color: #969696;
    padding: 0px 0px 12px 15px;
 
 }
-.browse_line{
+
+.browse_line {
    border-left: #3f3c3c solid 2px;
    margin: 0px 40px;
 }
-.browse_genre{
+
+.browse_genre {
    margin: 8px 20px 0px 10px;
-   
+
 }
-.genre_wrapper{
+
+.genre_wrapper {
    display: grid;
-   grid-template-columns: repeat(3,1fr);
+   grid-template-columns: repeat(3, 1fr);
 
 }
 
-.news_click{
+.news_click {
    display: none;
    flex-direction: column;
    position: fixed;
    font-size: 15px;
    top: 65px;
    width: 300px;
-   left: 455px; 
+   left: 455px;
    height: 200px;
    padding-top: 8px;
    background-color: #141414;
 }
-.news_content{
+
+.news_content {
    width: 265px;
    height: 28px;
    padding: 10px 15px 10px 20px;
 }
-.news_content:hover{
+
+.news_content:hover {
    background-color: #2a2b29;
    cursor: pointer;
 }
 
-.premium_hover{
+.premium_hover {
    display: none;
    flex-direction: column;
    align-items: center;
    position: fixed;
+   cursor: pointer;
    font-size: 15px;
    width: 350px;
    top: 75px;
@@ -171,7 +222,8 @@ body{ /*no margin and padding*/
    padding: 5px;
    padding-bottom: 20px;
 }
-.premium_arrow{
+
+.premium_arrow {
    width: 7px;
    height: 7px;
    position: fixed;
@@ -181,19 +233,21 @@ body{ /*no margin and padding*/
    background-color: #141414;
    transform: rotate(45deg);
 }
-.phov_content{
+
+.phov_content {
    padding: 3px 10px 3px 10px;
    text-align: center;
 }
-.search_click{
+
+.search_click {
    display: none;
-   position: fixed;
    width: 100%;
    padding: 25px;
    justify-content: center;
    background-color: #141414;
 }
-.search_input{
+
+.search_input {
    width: 67%;
    background-color: #141414;
    color: white;
@@ -202,58 +256,75 @@ body{ /*no margin and padding*/
    border: 0px;
    border-bottom: 2.5px solid #2a2b29;
 }
-.search_input:focus{
+
+.search_input:focus {
    border-bottom: 2.5px solid #a35913;
    outline: none;
 }
 
 /*Slider below Header*/
-.watch_now{  /*continuously changing slider*/
+.watch_now {
+   /*continuously changing slider*/
    width: 100%;
    height: 400px;
    display: flex;
    justify-content: space-around;
    align-items: center;
-   background: rgb(37,64,61);
-   background: radial-gradient(circle, rgba(37,64,61,1) 35%, rgba(3,22,20,1) 100%); 
+   background: rgb(37, 64, 61);
+   background: radial-gradient(circle, rgba(37, 64, 61, 1) 35%, rgba(3, 22, 20, 1) 100%);
 }
-.left_arrow{  /*left arrow design*/
+
+.left_arrow {
+   /*left arrow design*/
    /* display: contents; */
    border: solid black;
    border-width: 3px 0px 0px 3px;
    padding: 5px;
    transform: rotate(-45deg);
 }
-.right_arrow{  /*right arrow design*/
+
+.right_arrow {
+   /*right arrow design*/
    border: solid black;
    border-width: 0px 3px 3px 0px;
    padding: 5px;
    transform: rotate(-45deg);
 }
-.poster_image{  /*centre poster image of trending anime*/
+
+.poster_image {
+   /*centre poster image of trending anime*/
    height: 350px;
 }
-.poster_image:hover{
+
+.poster_image:hover {
    cursor: pointer;
 }
-.arrow_r{  /*arrow padding*/
+
+.arrow_r {
+   /*arrow padding*/
    padding: 10px 15px 10px 10px;
 }
-.arrow_l{  /*arrow padding*/
+
+.arrow_l {
+   /*arrow padding*/
    padding: 10px 10px 10px 15px;
 }
-.arrow_l:hover,.arrow_r:hover{  /*hover effects*/
+
+.arrow_l:hover,
+.arrow_r:hover {
+   /*hover effects*/
    background-color: #222222;
    cursor: pointer;
 }
 
 /*Slider info divs*/
-.pinfo_wrap{
+.pinfo_wrap {
    display: flex;
    padding: 20px 142px;
    justify-content: space-between;
 }
-.posterinfo{
+
+.posterinfo {
    background-color: #3f3c3c;
    height: 40px;
    width: 145px;
@@ -264,48 +335,59 @@ body{ /*no margin and padding*/
    cursor: pointer;
    font-weight: bold;
 }
-#p0{
+
+#p0 {
    background-color: rgb(63, 95, 109);
    border-top-color: #969696;
 }
 
 /*Hindi Dubs Part*/
-.hindi_dub{
+.hindi_dub {
    padding: 20px 142px;
    color: white;
 }
-.hr_hindi{
+
+.hr_hindi {
    height: 5px;
-   background: rgb(42,189,187);
-   background: linear-gradient(90deg, rgba(42,189,187,1) 35%, rgba(33,57,68,1) 100%); 
+   background: rgb(42, 189, 187);
+   background: linear-gradient(90deg, rgba(42, 189, 187, 1) 35%, rgba(33, 57, 68, 1) 100%);
 }
-.shows_scroll{
+
+.shows_scroll {
    display: flex;
    align-items: center;
    width: 100%;
    justify-content: space-evenly;
+   padding-bottom: 20px;
 }
-.scrolling_shows{
+
+.scrolling_shows {
    display: flex;
    align-items: center;
    justify-content: space-between;
    width: 79.2%;
 }
-.shows1{
+
+.shows1 {
    width: 155px;
    padding: 8px 5px 6px 5px;
 }
-.shows1:hover{
+
+.shows1:hover {
    background-color: rgb(31, 31, 31);
    cursor: pointer;
 }
-.card_img1{
+
+.card_img1 {
    width: 150px;
 }
-.card_name1{
+
+.card_name1 {
    color: white;
 }
-.left_arrow1{  /*left arrow design*/
+
+.left_arrow1 {
+   /*left arrow design*/
    border: solid white;
    border-width: 0px 3px 3px 0px;
    padding: 5px;
@@ -313,7 +395,9 @@ body{ /*no margin and padding*/
    transform: rotate(135deg);
    -webkit-transform: rotate(135deg);
 }
-.right_arrow1{  /*right arrow design*/
+
+.right_arrow1 {
+   /*right arrow design*/
    border: solid white;
    border-width: 0px 3px 3px 0px;
    padding: 5px;
@@ -321,14 +405,83 @@ body{ /*no margin and padding*/
    transform: rotate(-45deg);
    -webkit-transform: rotate(-45deg);
 }
-.arrow_r1{  /*arrow padding*/
+
+.arrow_r1 {
+   /*arrow padding*/
    cursor: pointer;
    padding: 8px 13px 8px 8px;
 }
-.arrow_l1{  /*arrow padding*/
+
+.arrow_l1 {
+   /*arrow padding*/
    cursor: pointer;
    padding: 8px 8px 8px 13px;
 }
-.arrow_r1:hover,.arrow_l1:hover{
+
+.arrow_r1:hover,
+.arrow_l1:hover {
    background-color: #3f3c3c;
+}
+
+.footer {
+   width: 100%;
+   padding-bottom: 40px;
+   padding-top: 20px;
+   background: rgb(24,57,51);
+   background: linear-gradient(0deg, rgba(24,57,51,1) 5%, rgba(0,0,0,1) 100%); 
+}
+
+.foot_wrap {
+   width: 80%;
+   display: flex;
+   flex-direction: column;
+   font-size: 15px;
+   color: rgb(185, 185, 185);
+}
+
+.foot_top_wrap {
+   width: 90%;
+   display: flex;
+   justify-content: space-around;
+   padding: 10px;
+}
+
+.foot_line {
+   border-top: 2px solid #969696;
+   padding: 10px;
+}
+
+.foot_last {
+   display: flex;
+   justify-content: space-between;
+   padding: 10px;
+}
+.nav_list,.crunch_list,.connect_list,.acc_list{
+   display: flex;
+   padding: 7px;
+}
+.foot_free_trial{
+   display: flex;
+   padding: 7px;
+   color: #f5c93a;
+}
+.nav_list:hover,.crunch_list:hover,.connect_list:hover,.acc_list:hover,.foot_free_trial:hover{
+   color: white;
+   text-decoration: underline;
+   cursor: pointer;
+}
+.foot_nav,.foot_crunch,.foot_connect,.foot_acc{
+   display: flex;
+   padding: 15px 7px;
+   font-size: 17px;
+   color: white;
+}
+.foot_last div{
+   padding: 10px 20px;
+
+}
+.Language:hover{
+   background-color: #3f3c3c;
+   color: white;
+   cursor: pointer;
 }

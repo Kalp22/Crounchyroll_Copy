@@ -2,7 +2,8 @@ const Body = [
    document.getElementById("colour"),
    document.getElementById('pInfoWrap'),
    document.getElementById('hindiDub'),
-   document.getElementById('showsScroll')
+   document.getElementById('showsScroll'),
+   document.getElementById('Footer'),
 ];
 const Head = [
    document.getElementById('head'),
@@ -287,6 +288,9 @@ Browse.addEventListener('click', () => {
          Browse.style.backgroundColor = "#141414"
          q = false;
          r = true;
+         for(b=0; b<Body.length-1; b++){
+            Body[b].style.display = 'flex';
+         }
       }
       else {
          BrowseExpand.style.display = "none";
@@ -322,6 +326,9 @@ News.addEventListener('click', () => {
          News.style.backgroundColor = "#141414";
          w = false;
          r = true;
+         for(b=0; b<Body.length-1; b++){
+            Body[b].style.display = 'flex';
+         }
       }
       else {
          NewsExpand.style.display = "none";
@@ -340,6 +347,14 @@ Premium.addEventListener("mouseover", () => {
 Premium.addEventListener("mouseout", () => {
    PremiumExpand.style.display = 'none';
 })
+PremiumExpand.addEventListener("mouseover", () => {
+   if (q && e) {
+      PremiumExpand.style.display = 'flex';
+   }
+})
+PremiumExpand.addEventListener("mouseout", () => {
+   PremiumExpand.style.display = 'none';
+})
 
 Search.addEventListener('click', () => {
    if (e && w && q) {
@@ -347,6 +362,9 @@ Search.addEventListener('click', () => {
       Search.style.backgroundColor = "#141414";
       e = false;
       r = true;
+      for(b=0; b<Body.length-1; b++){
+         Body[b].style.display = 'none';
+      }
    }
    else {
       if (w === false) {
@@ -357,6 +375,9 @@ Search.addEventListener('click', () => {
          Search.style.backgroundColor = "#141414";
          e = false;
          r = true;
+         for(b=0; b<Body.length-1; b++){
+            Body[b].style.display = 'none';
+         }
       }
       else if (q === false) {
          BrowseExpand.style.display = "none";
@@ -366,12 +387,18 @@ Search.addEventListener('click', () => {
          Search.style.backgroundColor = "#141414";
          e = false;
          r = true;
+         for(b=0; b<Body.length-1; b++){
+            Body[b].style.display = 'none';
+         }
       }
       else {
          SearchExpand.style.display = 'none';
          Search.style.backgroundColor = "#222222";
          e = true;
          r = false;
+         for(b=0; b<Body.length-1; b++){
+            Body[b].style.display = 'flex';
+         }
       }
    }
 })
@@ -390,9 +417,3 @@ Body.forEach(element => {
       r = false;
    })
 });
-
-// if (r) {
-//    Head.forEach(ele => {
-//       ele.style.backdropFilter = 'blur(1px)';
-//    })
-// }
