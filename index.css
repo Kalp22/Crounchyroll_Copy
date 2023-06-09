@@ -423,6 +423,35 @@ body {
    background-color: #3f3c3c;
 }
 
+.jjk_spotlight{
+   background: rgb(226,64,15);
+   background: linear-gradient(90deg, rgba(226,64,15,1) 34%, rgba(230,158,50,1) 100%); 
+   display: flex;
+   justify-content: center;
+   height: 330px;
+}
+.jjk_spot{
+   background-color: black;
+   display: flex;
+   width: 80%;
+   height: 80%;
+   align-self: center;
+   font-size: 15.5px;
+}
+.jjk_spot_img{
+
+}
+.jjk_poster{
+   padding: 0px 15px 10px 15px;
+   height: 270px;
+}
+.jjk_poster img{
+   height: 250px;
+}
+.jjk_content{
+   padding: 0px 10px;
+}
+
 .footer {
    width: 100%;
    padding-bottom: 40px;
