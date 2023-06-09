@@ -429,6 +429,7 @@ body {
    display: flex;
    justify-content: center;
    height: 330px;
+   margin: 20px 0px;
 }
 .jjk_spot{
    background-color: black;
@@ -438,9 +439,6 @@ body {
    align-self: center;
    font-size: 15.5px;
 }
-/* .jjk_spot_img{
-
-} */
 .jjk_poster{
    padding: 0px 15px 10px 15px;
    height: 270px;
@@ -450,7 +448,51 @@ body {
 }
 .jjk_content{
    padding: 0px 10px;
+   line-height: 21px;
 }
+.jjk_content h2{
+   font-weight: 400;
+}
+.jjk_watch{
+   display: flex;
+   justify-content: space-around;
+}
+.jjk_watch div{
+   margin-top: 5px;
+   padding: 10px;
+   background: rgb(204, 107, 17);
+   color: black;
+   cursor: pointer;
+}
+
+.onepiece_spotlight{
+   display: flex;
+   justify-content: center;
+   margin: 30px 0px;
+}
+.onepiece_wrapper{
+   display: flex;
+   width: 85%;
+}
+.onepiece_poster{
+   padding-right: 20px;
+}
+.onepiece_poster img{
+   height: 450px;
+}
+.onepiece_content{
+   display: flex;
+   flex-direction: column;
+   width: 80%;
+   
+}
+.hr_onepiece {
+   height: 5px;
+   background: rgb(42, 189, 187);
+   background: linear-gradient(90deg, rgba(42, 189, 187, 1) 35%, rgba(33, 57, 68, 1) 100%);
+   width: 100%;
+}
+
 
 .footer {
    width: 100%;
