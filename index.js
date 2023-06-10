@@ -3,7 +3,9 @@ const Body = [
    document.getElementById('pInfoWrap'),
    document.getElementById('hindiDub'),
    document.getElementById('showsScroll'),
-   document.getElementById('Footer'),
+   document.getElementById('jjkSpotlight'),
+   document.getElementById('onepieceSpotlight'),
+   document.getElementById('Footer')
 ];
 const Head = [
    document.getElementById('head'),
@@ -30,7 +32,7 @@ let e = true;
 
 const poster = [
    {
-      image: "Images/Demon S.webp",
+      image: "Images/Demon S.jpeg",
       colour: "rgb(37,64,61)",
       gradient: "radial-gradient(circle, rgba(37,64,61,1) 35%, rgba(3,22,20,1) 100%)"
    },
@@ -40,7 +42,7 @@ const poster = [
       gradient: "radial-gradient(circle, rgba(13,68,11,1) 35%, rgba(68,135,71,1) 100%)"
    },
    {
-      image: "Images/JJK.webp",
+      image: "Images/JJK.jpeg",
       colour: "rgb(5,20,32)",
       gradient: "radial-gradient(circle, rgba(5,20,32,1) 35%, rgba(27,35,50,1) 100%)"
    },
